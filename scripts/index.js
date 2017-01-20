@@ -20,10 +20,11 @@
   };
   var radius = 50;
   var clippingRegion = { x: 200, y: 133, r: radius };
-  var image = new Image();
-  image.src = "../images/blurimage.jpg";
-  image.width = canvsasWidth;
-  image.height = canvsasHeight;
+  var image = document.createElement("img");
+  image.src="images/blurimage.jpg";
+  image.style.width = canvsasWidth +"px";
+  image.style.height = canvsasHeight+ "px";
+  document.body.appendChild(image);
   image.onload = function() {
       initCanvas();
   }

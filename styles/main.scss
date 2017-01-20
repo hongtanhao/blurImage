@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  overflow: hidden;
+}
+.blur-div{
+  position:relative;
+}
+.blurpic{
+  display: block;
+  margin: 0 auto;
+  filter: blur(30px);
+  position:absolute;
+  top:0;
+  left: 0;
+  z-index: 0;
+}
+.filterpic{
+  position:absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  //background-color: red;
+}
+.button-group{
+  position: absolute;
+  width: 300px;
+  z-index: 200;
+  top: 70%;
+  left: 50%;
+  margin-left:-150px;
+
+}
+.button{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    margin-left: 40px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+  }
+.reset-button{
+  
+  background-color:green;
+
+}
+.reset-button:hover{
+  background-color:#058;
+}
+.show-button{
+  
+  background-color:#047;
+
+}
+.show-button:hover{
+  background-color:green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

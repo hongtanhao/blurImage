@@ -1,3 +1,3 @@
 # blurImage
-亲爱的朋友们，有空常来！
+小伙伴们，有空常来聊技术！
 https://hongtanhao.github.io/blurImage/

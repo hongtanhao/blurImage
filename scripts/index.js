@@ -47,8 +47,9 @@
       context.clip();
   }
 
-  function show() {
-      var timer = setInterval(function() {
+  function show(event) {
+    var event=event?event:window.event;  
+    var timer = setInterval(function() {
           var limit = Math.max(canvsasHeight, canvsasWidth);
           clippingRegion.r += 20;
           draw(image, clippingRegion);
@@ -56,12 +57,17 @@
               clearInterval(timer);
           }
       }, 20);
+    event.stopPropagation();
+    event.preventDefault();
   }
 
-  function reset() {
-      var xlimit = Math.random() * (canvsasWidth - 2 * radius) + radius;
+  function reset(event) {
+    var event=event?event:window.event;  
+    var xlimit = Math.random() * (canvsasWidth - 2 * radius) + radius;
       console.log(xlimit);
       var ylimit = Math.random() * (canvsasHeight - 2 * radius) + radius;
       clippingRegion = { x: xlimit, y: ylimit, r: radius };
       initCanvas();
+      event.stopPropagation();
+      event.preventDefault();
   }
